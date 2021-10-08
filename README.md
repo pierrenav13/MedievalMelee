@@ -13,7 +13,8 @@
   A production README
   
  #Wireframes
- ![Homepage 2](https://user-images.githubusercontent.com/85881627/136560159-7797e07d-433d-4928-8a24-a46fdefa6214.png)
+ ![Homepage 3](https://user-images.githubusercontent.com/85881627/136560356-0b156066-e508-4f67-bdbd-12f9af6ec8df.png)
+
   -Instructions: Shows a popup box with an explanation of the rules and the controls of the game (WASD).
   -Pause: Shows the player's current score and gives them the option to unpause and reset the game.
   -Game Level: Contains the player and the boss.
