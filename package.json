@@ -1,0 +1,38 @@
+{
+  "name": "medieval_melee",
+  "version": "1.0.0",
+  "description": "#Background   Medieval Melee is a 2D game where a player must avoid a boss that is chasing the player. The boss checks for the player's position, stores that position, then moves in that direction until it hits the edge of the board. Once it hits the edge, the boss check the position again and moves in that direction, but a little faster. This continues faster and faster until the player is caught and gets his score based on how long they survived.",
+  "main": "index.js",
+  "browserslist": [
+    "defaults"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --watch --mode=development",
+    "build": "webpack --mode=production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pierrenav13/MedievalMelee.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pierrenav13/MedievalMelee/issues"
+  },
+  "homepage": "https://github.com/pierrenav13/MedievalMelee#readme",
+  "dependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "babel-loader": "^8.2.2",
+    "core-js": "^3.18.2",
+    "css-loader": "^6.3.0",
+    "mini-css-extract-plugin": "^2.4.2",
+    "regenerator-runtime": "^0.13.9",
+    "sass": "^1.42.1",
+    "sass-loader": "^12.1.0",
+    "webpack": "^5.58.1",
+    "webpack-cli": "^4.9.0"
+  }
+}
