@@ -15,7 +15,17 @@
   \**********************/
 /***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-eval("const Character = __webpack_require__(/*! ./scripts/character */ \"./src/scripts/character.js\");\n\ndocument.addEventListener('DOMContentLoaded', () => {\n    const canvas = document.getElementById('med-mel');\n    const ctx = canvas.getContext('2d');\n    const tempPlayer = new Character({pos: [100, 225], vel: 0, height: 45, width: 30, color: 'navy'});\n    const tempBoss = new Character({pos: [350, 190], vel: 0, height: 95, width: 75, color: 'maroon'});\n    tempPlayer.draw(ctx);\n    tempBoss.draw(ctx);\n})\n\n//# sourceURL=webpack://medieval_melee/./src/index.js?");
+eval("const Player = __webpack_require__(/*! ./scripts/player */ \"./src/scripts/player.js\");\nconst Boss = __webpack_require__(/*! ./scripts/boss */ \"./src/scripts/boss.js\");\n\ndocument.addEventListener('DOMContentLoaded', () => {\n    const canvas = document.getElementById('med-mel');\n    const ctx = canvas.getContext('2d');\n    const player = new Player({ctx: ctx});\n    const boss = new Boss();\n\n    boss.draw(ctx);\n    player.draw(ctx);\n    //player.bindKeys();\n    player.bindKeys();\n})\n\n//# sourceURL=webpack://medieval_melee/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/scripts/boss.js":
+/*!*****************************!*\
+  !*** ./src/scripts/boss.js ***!
+  \*****************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+eval("const Character = __webpack_require__(/*! ./character */ \"./src/scripts/character.js\");\n\n\nfunction Boss(options = {}) {\n    options.pos = [350, 190];\n    options.vel = 25;\n    options.height = 95;\n    options.width = 75;\n    options.color = 'maroon';\n    Character.call(this, options);\n}\n\nfunction Surrogate() { }\nSurrogate.prototype = Character.prototype;\nBoss.prototype = new Surrogate();\nBoss.prototype.constructor = Boss;\n\nmodule.exports = Boss;\n\n//# sourceURL=webpack://medieval_melee/./src/scripts/boss.js?");
 
 /***/ }),
 
@@ -25,7 +35,17 @@ eval("const Character = __webpack_require__(/*! ./scripts/character */ \"./src/s
   \**********************************/
 /***/ (function(module) {
 
-eval("function Character(options){\n    this.pos = options.pos;\n    this.vel = options.vel;\n    this.height = options.height;\n    this.width = options.width;\n    this.color = options.color;\n}\n\nCharacter.prototype.draw = function(ctx){\n    ctx.fillStyle = this.color;\n    ctx.fillRect(...this.pos, this.width, this.height);\n}\n\nmodule.exports = Character;\n\n//# sourceURL=webpack://medieval_melee/./src/scripts/character.js?");
+eval("function Character(options){\n    this.pos = options.pos;\n    this.vel = options.vel;\n    this.height = options.height;\n    this.width = options.width;\n    this.color = options.color;\n    this.ctx = options.ctx || undefined;\n}\n\nCharacter.prototype.draw = function(ctx){\n    ctx.clearRect(0,0,500,500);\n    ctx.beginPath();\n    ctx.fillStyle = this.color;\n    ctx.fillRect(...this.pos, this.width, this.height);\n}\n\nCharacter.prototype.bindKeys = function(){\n    let that = this;\n    key('w', function () { that.move([0, -(that.vel)]) });\n    key('a', function () { that.move([-(that.vel), 0]) });\n    key('s', function () { that.move([0, (that.vel)])});\n    key('d', function () { that.move([that.vel, 0]) });\n};\n\nCharacter.prototype.move = function (dir) {\n    this.pos[0] += dir[0];\n    this.pos[1] += dir[1];\n    this.draw(this.ctx);\n};\n\nmodule.exports = Character;\n\n//# sourceURL=webpack://medieval_melee/./src/scripts/character.js?");
+
+/***/ }),
+
+/***/ "./src/scripts/player.js":
+/*!*******************************!*\
+  !*** ./src/scripts/player.js ***!
+  \*******************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+eval("const Character = __webpack_require__(/*! ./character */ \"./src/scripts/character.js\");\n\n\nfunction Player(options = {}){\n    options.pos = [100, 225];\n    options.vel = 25;\n    options.height = 45;\n    options.width = 30;\n    options.color = 'navy';\n    Character.call(this, options);\n};\n\nfunction Surrogate() { };\nSurrogate.prototype = Character.prototype;\nPlayer.prototype = new Surrogate();\nPlayer.prototype.constructor = Player;\n\nmodule.exports = Player;\n\n\n\n//# sourceURL=webpack://medieval_melee/./src/scripts/player.js?");
 
 /***/ })
 
