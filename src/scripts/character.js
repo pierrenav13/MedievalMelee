@@ -28,6 +28,10 @@ Character.prototype.drawImg = function () {
         }
     } else{
         this.img.src = 'src/scripts/flipped-sprite-sheet.png'
+        if (this.frame >= 1) {
+            imgDim = [45, 38, 35, 40];
+        }
+        //imgDim = [45, 38, 35, 40];
     }
     
     //imgDim = [55, 38, 35, 40];
