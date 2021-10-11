@@ -89,7 +89,7 @@ Game.prototype.loopGame = function(){
 
     if (moved){
         this.player.frame += 1;
-        if (this.player.frame > 3){
+        if (this.player.frame > 20){
             this.player.frame = 1;
         }
     } else{

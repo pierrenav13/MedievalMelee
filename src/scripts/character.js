@@ -20,6 +20,8 @@ function Character(options){
 
 Character.prototype.drawImg = function () {
     let imgDim = [0, 0, 35, 40];
+    
+    this.direction = 1;
     if (this.direction === 0){
         this.img.src = 'src/scripts/adventurer-v1.5-Sheet.png';
         if(this.frame === 1){
@@ -27,7 +29,9 @@ Character.prototype.drawImg = function () {
         } else if (this.frame === 2){
             imgDim = [103, 38, 35, 40];
         } else if (this.frame === 3){
-            imgDim = [154, 38, 35, 40]
+            imgDim = [154, 38, 35, 40];
+        } else if (this.frame === 4){
+            imgDim = [205, 38, 35, 40];
         }
     } else{
         this.img.src = 'src/scripts/flipped-sprite-sheet.png';
@@ -37,6 +41,8 @@ Character.prototype.drawImg = function () {
             imgDim = [93, 38, 35, 40];
         } else if (this.frame === 3){
             imgDim = [140, 38, 35, 40];
+        } else if (this.frame === 4){
+            imgDim = [190, 38, 35, 40];
         }
     }
  
