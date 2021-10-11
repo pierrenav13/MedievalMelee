@@ -3,11 +3,24 @@
   \*************************************************************************************************************************************/
 
 canvas{
-    background-color: rgb(117, 53, 71);
-    border: 2px solid black;
-    margin: 0 auto;
+  background-color: rgb(117, 53, 71);
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 body{
   background-color: rgb(70, 70, 70);
+}
+
+h1{
+  color: white;
+  font-family: fantasy;
+  /* margin: 0 auto; */
+  display: flex;
+  justify-content: center;
 }

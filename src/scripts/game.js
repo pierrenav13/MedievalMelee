@@ -88,8 +88,11 @@ Game.prototype.loopGame = function(){
     }
 
     if (moved){
-        this.player.frame += 1;
-        if (this.player.frame > 20){
+        //500 ms intervals for animation
+        //500 * 4 = 2000, 500, 1000, 1500, 2000;
+
+        this.player.frame += 2;
+        if (this.player.frame > 3000){
             this.player.frame = 1;
         }
     } else{
