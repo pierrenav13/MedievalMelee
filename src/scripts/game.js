@@ -1,5 +1,6 @@
 const Player = require('./player');
 const Boss = require('./boss');
+const { setInterval } = require('core-js');
 
 function Game(player, boss, canvas, ctx){
     this.player = player;
@@ -13,8 +14,12 @@ function Game(player, boss, canvas, ctx){
     this.bindMovement();
     let that = this;
     this.boundLoop = this.loopGame.bind(this);
+    this.count = 0;
     this.player.img.onload = function () {
-        that.loopGame();
+        //that.loopGame();
+        setInterval(() => {
+            that.loopGame()
+        }, 20);
     }
 
 }
@@ -42,7 +47,8 @@ Game.prototype.over = function(){
         this.player.pos[0] + this.player.width > this.boss.pos[0] &&
         this.player.pos[1] < this.boss.pos[1] + this.boss.width &&
         this.player.height + this.player.pos[1] > this.boss.pos[1]){
-            alert('Game Over');
+            //alert('Game Over');
+            console.log('collision');
         }
 }
 
@@ -59,28 +65,37 @@ Game.prototype.move = function(x, y){
 
 Game.prototype.loopGame = function(){
     this.ctx.clearRect(0, 0, 500, 500);
+
+    let moved = false;
+
     if (this.keysPressed.w) {
         //debugger
         this.move(0, -(this.player.vel))
-        //this.player.pos[1] -= this.player.vel;
+        moved = true;
     } else if (this.keysPressed.s) {
         this.move(0, (this.player.vel))
-        //this.player.pos[1] += this.player.vel;
+        moved = true;
     }
     
     if (this.keysPressed.a) {
         this.move(-(this.player.vel), 0)
-        //this.player.pos[0] -= this.player.vel;
         this.player.direction = 1;
+        moved = true;
     } else if (this.keysPressed.d) {
         this.move((this.player.vel), 0)
-        //this.player.pos[0] += this.player.vel;
+        moved = true;
         this.player.direction = 0;
     }
 
+    if (moved){
+        this.player.frame += 1
+    } else{
+        this.player.frame = 0;
+    }
+
     this.draw();
-    this.over();
-    window.requestAnimationFrame(this.boundLoop);
+    //this.over();
+    //window.requestAnimationFrame(this.boundLoop);
 }
 
 
