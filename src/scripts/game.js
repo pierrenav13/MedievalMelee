@@ -53,7 +53,7 @@ Game.prototype.over = function(){
 }
 
 Game.prototype.move = function(x, y){
-    if ((this.player.pos[0] + x) < (this.DIM_X - 50) && (this.player.pos[0] + x) > -20){
+    if ((this.player.pos[0] + x) < (this.DIM_X - 50) && (this.player.pos[0] + x) > -2){
         this.player.pos[0] += x;
     }
     if ((this.player.pos[1] + y) < (this.DIM_Y - 70) && (this.player.pos[1] + y) > -2){
@@ -88,7 +88,10 @@ Game.prototype.loopGame = function(){
     }
 
     if (moved){
-        this.player.frame += 1
+        this.player.frame += 1;
+        if (this.player.frame > 3){
+            this.player.frame = 1;
+        }
     } else{
         this.player.frame = 0;
     }

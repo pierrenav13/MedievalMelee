@@ -20,22 +20,26 @@ function Character(options){
 
 Character.prototype.drawImg = function () {
     let imgDim = [0, 0, 35, 40];
-
     if (this.direction === 0){
         this.img.src = 'src/scripts/adventurer-v1.5-Sheet.png';
-        if(this.frame >= 1){
+        if(this.frame === 1){
             imgDim = [55, 38, 35, 40];
+        } else if (this.frame === 2){
+            imgDim = [103, 38, 35, 40];
+        } else if (this.frame === 3){
+            imgDim = [154, 38, 35, 40]
         }
     } else{
-        this.img.src = 'src/scripts/flipped-sprite-sheet.png'
-        if (this.frame >= 1) {
+        this.img.src = 'src/scripts/flipped-sprite-sheet.png';
+        if (this.frame === 1) {
             imgDim = [45, 38, 35, 40];
+        } else if (this.frame === 2){
+            imgDim = [93, 38, 35, 40];
+        } else if (this.frame === 3){
+            imgDim = [140, 38, 35, 40];
         }
-        //imgDim = [45, 38, 35, 40];
     }
-    
-    //imgDim = [55, 38, 35, 40];
-    //imgDim = [];
+ 
 
     this.ctx.fillRect(...this.pos, this.width, this.height)
     this.ctx.drawImage(this.img, ...imgDim, (this.pos[0] - this.width/2.5), (this.pos[1] - this.height/6), this.width + (this.width/3), this.height + (this.height / 4));
