@@ -49,7 +49,7 @@ Game.prototype.loopGame = function(){
     ctx.clearRect(0, 0, this.DIM_X, this.DIM_Y);
     //debugger
     if (this.keysPressed.w) {
-        debugger
+        //debugger
         //this.player.movePlayer([0, -(this.player.vel)])
         this.player.pos[1] -= this.player.vel;
     } else if (this.keysPressed.s) {
