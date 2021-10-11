@@ -98,7 +98,8 @@ Game.prototype.loopGame = function(){
     } else{
         this.player.frame = 0;
     }
-
+    this.boss.getPos(this.player.pos);
+    this.boss.move(this.DIM_X, this.DIM_Y);
     this.draw();
     //this.over();
     //window.requestAnimationFrame(this.boundLoop);

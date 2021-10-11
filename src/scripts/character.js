@@ -56,7 +56,7 @@ Character.prototype.drawImg = function () {
     }
  
     //For testing hitboxes for collision
-    this.ctx.fillRect(...this.pos, this.width, this.height)
+    //this.ctx.fillRect(...this.pos, this.width, this.height)
     this.ctx.drawImage(this.img, ...imgDim, (this.pos[0] - this.width/2.5), (this.pos[1] - this.height/6), this.width + (this.width/3), this.height + (this.height / 4));
 }
 
