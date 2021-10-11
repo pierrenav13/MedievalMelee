@@ -29,9 +29,11 @@ Game.prototype.bindMovement = function () {
     let that = this;
     window.addEventListener('keydown', function (e) {
         //debugger
+        e.preventDefault();
         that.keysPressed[e.key] = true;
     })
     window.addEventListener('keyup', function (e) {
+        e.preventDefault();
         that.keysPressed[e.key] = false;
     })
 }
