@@ -12,13 +12,11 @@ function Game(player, boss, canvas, ctx){
     //this.player.bindKeys();
     this.bindMovement();
     let that = this;
+    this.boundLoop = this.loopGame.bind(this);
     this.player.img.onload = function () {
-        //that.drawImg();
         that.loopGame();
     }
-    //this.draw();
-    // this.player
-    //window.requestAnimationFrame(this.loopGame);
+
 }
 
 Game.prototype.bindMovement = function () {
@@ -36,37 +34,55 @@ Game.prototype.bindMovement = function () {
 Game.prototype.draw = function(){
     this.player.drawImg();
     this.boss.draw(this.ctx);
-
-    // this.ctx.drawImage(this.player.img, 0, 0, 35, 40, ...this.player.pos, this.player.width, this.player.height);
-    // debugger
-    // this.ctx.fillStyle = this.boss.color;
-    // this.ctx.fillRect(...this.boss.pos, this.boss.width, this.boss.height);
 };
 
+Game.prototype.over = function(){
+    //alert('In over()')
+    if(this.player.pos[0] < this.boss.pos[0] + this.boss.width &&
+        this.player.pos[0] + this.player.width > this.boss.pos[0] &&
+        this.player.pos[1] < this.boss.pos[1] + this.boss.width &&
+        this.player.height + this.player.pos[1] > this.boss.pos[1]){
+            alert('Game Over');
+        }
+}
+
+Game.prototype.move = function(x, y){
+    if ((this.player.pos[0] + x) < (this.DIM_X - 50) && (this.player.pos[0] + x) > -20){
+        this.player.pos[0] += x;
+    }
+    if ((this.player.pos[1] + y) < (this.DIM_Y - 70) && (this.player.pos[1] + y) > -2){
+        this.player.pos[1] += y;
+    }
+    
+    //this.player.pos[1] += y;
+}
+
 Game.prototype.loopGame = function(){
-    //debugger
-    let ctx = this.ctx;
-    ctx.clearRect(0, 0, this.DIM_X, this.DIM_Y);
-    //debugger
+    this.ctx.clearRect(0, 0, 500, 500);
     if (this.keysPressed.w) {
         //debugger
-        //this.player.movePlayer([0, -(this.player.vel)])
-        this.player.pos[1] -= this.player.vel;
+        this.move(0, -(this.player.vel))
+        //this.player.pos[1] -= this.player.vel;
     } else if (this.keysPressed.s) {
-        //this.player.movePlayer([0, (this.player.vel)])
-        this.player.pos[1] += this.player.vel;
+        this.move(0, (this.player.vel))
+        //this.player.pos[1] += this.player.vel;
     }
     
     if (this.keysPressed.a) {
-        //this.player.movePlayer([-(this.player.vel), 0])
-        this.player.pos[0] -= this.player.vel;
+        this.move(-(this.player.vel), 0)
+        //this.player.pos[0] -= this.player.vel;
+        this.player.direction = 1;
     } else if (this.keysPressed.d) {
-        //this.player.movePlayer([(this.player.vel), 0])
-        this.player.pos[0] += this.player.vel;
+        this.move((this.player.vel), 0)
+        //this.player.pos[0] += this.player.vel;
+        this.player.direction = 0;
     }
 
     this.draw();
-    window.requestAnimationFrame(this.loopGame);
+    this.over();
+    window.requestAnimationFrame(this.boundLoop);
 }
+
+
 
 module.exports = Game;

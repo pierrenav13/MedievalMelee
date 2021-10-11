@@ -10,17 +10,21 @@ function Boss(options = {}) {
 
     this.pos = [350, 190];
     this.vel = 25;
-    this.height = 95;
-    this.width = 75;
+    this.height = 115;
+    this.width = 95;
     this.color = 'maroon';
     this.ctx = options.ctx;
+    this.img = new Image();
 }
 
 Boss.prototype.draw = function () {
-    this.ctx.clearRect(this.pos[0], this.pos[1], -(this.width), -(this.height));
-    this.ctx.beginPath();
-    this.ctx.fillStyle = this.color;
-    this.ctx.fillRect(...this.pos, this.width, this.height);
+    this.img.src = 'src/scripts/ghost-idle.png';
+    this.ctx.drawImage(this.img, 20, 18, 53, 50, ...this.pos, this.width, this.height);
+
+    // this.ctx.clearRect(this.pos[0], this.pos[1], -(this.width), -(this.height));
+    // this.ctx.beginPath();
+    // this.ctx.fillStyle = this.color;
+    // this.ctx.fillRect(...this.pos, this.width, this.height);
 }
 
 // function Surrogate() { }

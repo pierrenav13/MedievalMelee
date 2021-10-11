@@ -3,6 +3,11 @@
   \*************************************************************************************************************************************/
 
 canvas{
-    background-color: rgb(112, 53, 70);
+    background-color: rgb(117, 53, 71);
     border: 2px solid black;
+    margin: 0 auto;
+}
+
+body{
+  background-color: rgb(70, 70, 70);
 }

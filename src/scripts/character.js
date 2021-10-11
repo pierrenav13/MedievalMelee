@@ -8,10 +8,10 @@ function Character(options){
     //this.keysPressed = {};
     this.ctx = options.ctx;
  
-    let that = this;
+    this.direction = 0;
     this.img = new Image();
     
-    this.img.src = 'src/scripts/adventurer-v1.5-Sheet.png'
+    //this.img.src = 'src/scripts/adventurer-v1.5-Sheet.png'
 
     // this.img.onload = function(){
     //     that.drawImg();
@@ -19,10 +19,14 @@ function Character(options){
 }
 
 Character.prototype.drawImg = function () {
-    this.img.src = 'src/scripts/adventurer-v1.5-Sheet.png';
+    if (this.direction === 0){
+        this.img.src = 'src/scripts/adventurer-v1.5-Sheet.png';
+    } else{
+        this.img.src = 'src/scripts/flipped-sprite-sheet.png'
+    }
+    let imgDim = [0,0,35,40];
 
-    //console.log([this.img, 0, 0, 16, 18, ...this.pos, this.width, this.height]);
-    this.ctx.drawImage(this.img, 0, 0, 35, 40, ...this.pos, this.width, this.height);
+    this.ctx.drawImage(this.img, ...imgDim, ...this.pos, this.width, this.height);
 }
 
 Character.prototype.clearImg = function () {
@@ -62,13 +66,13 @@ Character.prototype.bindKeys = function(){
 // }
 
 
-Character.prototype.movePlayer = function (dir) {
-    //this.clearImg();
-    this.pos[0] += dir[0];
-    this.pos[1] += dir[1];
-    //this.drawImg();
-    //this.draw(this.ctx);
-    //console.log(this.pos);
-};
+// Character.prototype.movePlayer = function (dir) {
+//     //this.clearImg();
+//     this.pos[0] += dir[0];
+//     this.pos[1] += dir[1];
+//     //this.drawImg();
+//     //this.draw(this.ctx);
+//     //console.log(this.pos);
+// };
 
 module.exports = Character;
