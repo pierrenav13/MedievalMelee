@@ -45,28 +45,31 @@ Game.prototype.draw = function(){
 
 Game.prototype.over = function(){
     //alert('In over()')
-    if(this.player.pos[0] < this.boss.pos[0] + this.boss.width &&
-        this.player.pos[0] + this.player.width > this.boss.pos[0] &&
-        this.player.pos[1] < this.boss.pos[1] + this.boss.width &&
-        this.player.height + this.player.pos[1] > this.boss.pos[1]){
-            //alert('Game Over');
-            console.log('collision');
+    if(this.player.pos[0] + 20 < this.boss.pos[0] + this.boss.width &&
+        this.player.pos[0] + this.player.width > this.boss.pos[0] + 20 &&
+        this.player.pos[1] - 25 < this.boss.pos[1] + this.boss.width &&
+        this.player.height + this.player.pos[1] > this.boss.pos[1] + 10){
+            alert('Game Over');
+            //console.log('collision');
         }
 }
 
 Game.prototype.move = function(x, y){
     if ((this.player.pos[0] + x) < (this.DIM_X - 50) && (this.player.pos[0] + x) > -2){
         this.player.pos[0] += x;
+    } else{
+        return false;
     }
     if ((this.player.pos[1] + y) < (this.DIM_Y - 70) && (this.player.pos[1] + y) > -2){
         this.player.pos[1] += y;
+    } else{
+        return false;
     }
-    
-    //this.player.pos[1] += y;
+    return true;
 }
 
 Game.prototype.loopGame = function(){
-    this.ctx.clearRect(0, 0, 500, 500);
+    this.ctx.clearRect(0, 0, this.DIM_X, this.DIM_Y);
 
     let moved = false;
 
@@ -100,10 +103,14 @@ Game.prototype.loopGame = function(){
     } else{
         this.player.frame = 0;
     }
-    this.boss.getPos(this.player.pos);
-    this.boss.move(this.DIM_X, this.DIM_Y);
+    this.boss.getPos(this.player.pos, this.DIM_X, this.DIM_Y);
+    //this.boss.move(this.DIM_X, this.DIM_Y);
+    // while (this.boss.move(this.DIM_X, this.DIM_Y)){
+    //     this.draw();
+    // }
+    
     this.draw();
-    //this.over();
+    this.over();
     //window.requestAnimationFrame(this.boundLoop);
 }
 
