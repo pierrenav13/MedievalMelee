@@ -4,6 +4,8 @@
 
 body{
   background-color: rgb(87, 87, 87);
+  /* background-image: url('https://cutewallpaper.org/21/pixel-castle-background/WIP-2D-Platformer-Asset-Pack-Medieval-Castle-Devlogs-.gif'); */
+  background-image: url('https://i.ytimg.com/vi/_4GBeQb9Q-w/maxresdefault.jpg');
 }
 
 h1{
@@ -19,16 +21,13 @@ h1{
 #buttons{
   display: flex;
   justify-content: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  
 }
 
 .instructions{
-  /* margin-left: 135px; */
   margin-bottom: 10px;
-  /* padding-bottom: 10px; */
   padding: 5px;
-  /* padding-right: 5px;
-  padding-left: 5px; */
   font-family: fantasy;
   font-size: 14pt;
   display: inline-block;
@@ -37,7 +36,6 @@ h1{
 }
 
 .reset{
-  /* margin-right: 135px; */
   margin-bottom: 10px;
   padding: 5px;
   font-family: fantasy;
@@ -48,19 +46,35 @@ h1{
 }
 
 #instructions{
-  display: flex;
-  position: absolute;
-  justify-content: center;
   display: none;
+  position: absolute;
+  margin-left: 40px;
+  align-items: center;
+  flex-direction: column;
+  font-family: fantasy;
+  color: white;
+  background:rgb(168, 138, 55);
+  border: 2px solid black;
+  padding: 5px;
+
 }
 
 #instructions li{
+  padding: 5px;
   display: inline-block;
   position: relative;
 }
 
-.instructions, .reset:hover{
-  cursor: pointer;
+.reset a, .instructions a{
+  text-decoration: none;
+  color: black;
 }
 
+
+
+#score{
+  font-family: fantasy;
+  font-size: 18pt;
+  color: white;
+}
 

@@ -16,8 +16,8 @@
 <body>
     <h1>Medieval Melee</h1>
     <div id='buttons'>
-        <span class='instructions'>Instructions</span>
-        <p id='score'>Score: 0</p>
+        <span class='instructions'><a href="javascript:;" onclick='javascript:showInstructions();'>Instructions</a></span>
+        <span id='score'>Score: 0</span>
         <span class='reset'><a href="">Reset Game</a></span>
     </div>
     <ul id='instructions'>
@@ -25,10 +25,11 @@
         <li>The aim of the game is to evade the boss that bounces
         around the stage.</li>
         <li>Each time the boss hits the edge of
-        the screen, it gets faster.</li>
-        <li>The longer you survive the
+        the stage, it gets faster.</li>
+        <li>The longer you survive, the
         higher the score!</li>
     </ul>
+    <!-- <img src="assets/WIP-2D-Platformer-Asset-Pack-Medieval-Castle-Devlogs.gif" alt="Background"> -->
     <canvas id='med-mel' width="500" height="500"></canvas>
     
 </body>

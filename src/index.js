@@ -9,7 +9,4 @@ document.addEventListener('DOMContentLoaded', () => {
     const boss = new Boss({ctx: ctx});
     const game = new Game(player, boss, canvas, ctx);
     game.draw();
-
-
-    
 })

@@ -52,7 +52,7 @@ Boss.prototype.bounce = function(dimX, dimY){
         this.pos[0] += this.bX;
     } else {
         if (this.bX < 0.22 && this.bX > -0.22){
-            this.bX = -this.bX * 1.05;
+            this.bX = -this.bX * 1.065;
         } else{
             this.bX = -this.bX;
         }
@@ -61,7 +61,7 @@ Boss.prototype.bounce = function(dimX, dimY){
         this.pos[1] += this.bY;
     } else {
         if(this.bY < 0.22 && this.bY > -0.22){
-            this.bY = -this.bY * 1.05;
+            this.bY = -this.bY * 1.065;
         } else {
             this.bY = -this.bY;
         }

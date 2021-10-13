@@ -35,14 +35,21 @@ function Game(player, boss, canvas, ctx){
     this.keysPressed = {};
     this.bindMovement();
     let that = this;
-    //this.boundLoop = this.loopGame.bind(this);
+
     this.gameOver = false;
+    this.instructions = document.getElementById('instructions');
+    let boundShow = this.showInstructions.bind(this);
+    this.instructions.addEventListener('onclick', boundShow);
     this.player.img.onload = function () {
         setInterval(() => {
             that.loopGame()
         }, 20);
     }
 
+}
+
+Game.prototype.showInstructions = function(){
+    this.instructions.style.display = 'flex';
 }
 
 Game.prototype.bindMovement = function () {
