@@ -2,19 +2,8 @@
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
 
-canvas{
-  background-color: rgb(70, 54, 62);
-  border: 8px solid rgb(46, 46, 46);
-  display: flex;
-  justify-content: center;
-  padding-left: 0;
-  padding-right: 0;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 body{
-  background-color: rgb(70, 70, 70);
+  background-color: rgb(87, 87, 87);
 }
 
 h1{
@@ -23,5 +12,55 @@ h1{
   font-size: 32pt;
   display: flex;
   justify-content: center;
-  margin-bottom: 0;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
+
+#buttons{
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+}
+
+.instructions{
+  /* margin-left: 135px; */
+  margin-bottom: 10px;
+  /* padding-bottom: 10px; */
+  padding: 5px;
+  /* padding-right: 5px;
+  padding-left: 5px; */
+  font-family: fantasy;
+  font-size: 14pt;
+  display: inline-block;
+  background-color: rgb(168, 138, 55);
+  border: 2px solid black;
+}
+
+.reset{
+  /* margin-right: 135px; */
+  margin-bottom: 10px;
+  padding: 5px;
+  font-family: fantasy;
+  font-size: 14pt;
+  display: inline-block;
+  background-color: rgb(168, 138, 55);
+  border: 2px solid black;
+}
+
+#instructions{
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  display: none;
+}
+
+#instructions li{
+  display: inline-block;
+  position: relative;
+}
+
+.instructions, .reset:hover{
+  cursor: pointer;
+}
+
+

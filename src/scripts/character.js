@@ -24,7 +24,7 @@ Character.prototype.drawImg = function () {
     
     //this.direction = 1;
     if (this.direction === 0){
-        this.img.src = 'src/scripts/adventurer-v1.5-Sheet.png';
+        this.img.src = 'assets/adventurer-v1.5-Sheet.png';
         if(this.frame >= 1 && this.frame < 499){
             imgDim = [55, 38, 35, 40];
         } else if (this.frame >= 500 && this.frame < 999){
@@ -39,7 +39,7 @@ Character.prototype.drawImg = function () {
             imgDim = [303, 38, 35, 40];
         }
     } else{
-        this.img.src = 'src/scripts/flipped-sprite-sheet.png';
+        this.img.src = 'assets/flipped-sprite-sheet.png';
         if (this.frame >= 1 && this.frame < 499) {
             imgDim = [45, 38, 35, 40];
         } else if (this.frame >= 500 && this.frame < 999){
@@ -56,7 +56,7 @@ Character.prototype.drawImg = function () {
     }
  
     //For testing hitboxes for collision
-    this.ctx.fillRect(...this.pos, this.width, this.height)
+    //this.ctx.fillRect(...this.pos, this.width, this.height)
     this.ctx.drawImage(this.img, ...imgDim, (this.pos[0] - this.width/2.5), (this.pos[1] - this.height/6), this.width + (this.width/3), this.height + (this.height / 4));
 }
 

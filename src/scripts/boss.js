@@ -4,26 +4,28 @@
 function Boss(options = {}) {
     this.pos = [350, 190];
     this.speedCap = 3000;
-    this.height = 115;
+    this.height = 110;
     this.width = 85;
     this.ctx = options.ctx;
     this.img = new Image();
+    this.bX = 0.1;
+    this.bY = -0.1;
 }
 
 Boss.prototype.draw = function () {
-    this.img.src = 'src/scripts/ghost-idle.png';
+    if (this.bX > 0) {
+        this.img.src = 'src/scripts/ghost-flipped.png'
+    }else {
+        this.img.src = 'src/scripts/ghost-idle.png';
+    }
     //this.ctx.fillRect(...this.pos, this.width, this.height);
+
     this.ctx.drawImage(this.img, 20, 18, 53, 50, (this.pos[0] + this.width/8), this.pos[1], (this.width + this.width/1.5), (this.height + this.height/6));
     
 }
 
 Boss.prototype.getPos = function(pos, x, y){
     this.enemyPos = pos;
-    // let edge = false;
-
-    // while (!edge){
-    //     edge = this.move(x, y);
-    // }
 }
 
 Boss.prototype.move = function(dimX, dimY){
@@ -44,6 +46,30 @@ Boss.prototype.move = function(dimX, dimY){
     }
     return edge;
 };
+
+Boss.prototype.bounce = function(dimX, dimY){
+    if((this.pos[0] + this.bX) < (dimX - 80) && (this.pos[0] + this.bX) > -2){
+        this.pos[0] += this.bX;
+    } else {
+        if (this.bX < 0.22 && this.bX > -0.22){
+            this.bX = -this.bX * 1.05;
+        } else{
+            this.bX = -this.bX;
+        }
+    }
+    if ((this.pos[1] + this.bY) < (dimY - 115) && (this.pos[1] + this.bY) > -2) {
+        this.pos[1] += this.bY;
+    } else {
+        if(this.bY < 0.22 && this.bY > -0.22){
+            this.bY = -this.bY * 1.05;
+        } else {
+            this.bY = -this.bY;
+        }
+    }
+    //console.log(this.pos);
+    //this.bX += 1;
+    //this.bY += 1;
+}
 
 // function Surrogate() { }
 // Surrogate.prototype = Character.prototype;
