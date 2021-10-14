@@ -4,7 +4,7 @@ Live: https://pierrenav13.github.io/MedievalMelee/
 
 ## Background
 
-  Medieval Melee is a 2D game where a player must avoid a boss that is chasing the player. The boss checks for the player's position, stores that position, then moves in that direction until it hits the edge of the board. Once it hits the edge, the boss check the position again and moves in that direction, but a little faster. This continues faster and faster until the player is caught and gets his score based on how long they survived.
+  Medieval Melee is a 2D game where a player must avoid a boss that is bouncing around the stage. The boss gets faster each time it hits an edge of the stage. As time goes on, the boss will get faster and faster as you try to stay out of its path. This continues until the player is caught and gets their score based on how long they survived.
   
  ## Functionality & MVPs
  Users will be able to:
