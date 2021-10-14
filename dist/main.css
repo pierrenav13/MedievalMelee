@@ -24,7 +24,7 @@ h1{
   
 }
 
-.instructions{ 
+#instruction-button{ 
   margin-bottom: 20px;
   padding: 5px;
   font-family: fantasy;
@@ -34,7 +34,7 @@ h1{
   border: 2px solid black;
 }
 
-.instructions a:hover #instructions{
+#instruction-button:hover #instructions{
   display: flex;
 }
 
@@ -70,7 +70,7 @@ h1{
   position: relative;
 }
 
-.reset a, .instructions a{
+.reset a, #instruction-button a{
   text-decoration: none;
   color: white;
 }

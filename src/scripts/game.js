@@ -37,9 +37,11 @@ function Game(player, boss, canvas, ctx){
     let that = this;
 
     this.gameOver = false;
-    this.instructions = document.getElementById('instructions');
+    this.instructions = document.getElementById('instruction-button');
     let boundShow = this.showInstructions.bind(this);
-    this.instructions.addEventListener('onclick', boundShow);
+    let boundHide = this.hideInstructions.bind(this);
+    this.instructions.addEventListener('mouseenter', boundShow);
+    this.instructions.addEventListener('mouseleave', boundHide);
     this.player.img.onload = function () {
         setInterval(() => {
             that.loopGame()
@@ -49,7 +51,11 @@ function Game(player, boss, canvas, ctx){
 }
 
 Game.prototype.showInstructions = function(){
-    this.instructions.style.display = 'flex';
+    document.getElementById('instructions').style.display = 'flex';
+}
+
+Game.prototype.hideInstructions = function(){
+    document.getElementById('instructions').style.display = 'none';
 }
 
 Game.prototype.bindMovement = function () {
@@ -59,17 +65,12 @@ Game.prototype.bindMovement = function () {
         //debugger
         e.preventDefault();
         that.keysPressed[e.key] = true;
-        if(gameOver){
-            window.removeEventListener('keyup', keyUp);
-        }
+        
 
     })
     window.addEventListener('keyup', function keyUp(e) {
         e.preventDefault();
         that.keysPressed[e.key] = false;
-        if(gameOver){
-            window.removeEventListener('keyup', keyUp);
-        }
     })
 }
 
@@ -143,9 +144,8 @@ Game.prototype.loopGame = function(){
         this.draw();
         this.over();
     } else{
-        //this.ctx.clearRect(0, 0, this.DIM_X, this.DIM_Y);
-        this.bindMovement();
         document.getElementById('game-over').style.display = 'flex';
+        //document.getElementById('instructions').style.display = 'flex';
     }
     //window.requestAnimationFrame(this.boundLoop);
 }
