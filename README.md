@@ -1,9 +1,10 @@
 # MedievalMelee
 
-#Background
+## Background
+
   Medieval Melee is a 2D game where a player must avoid a boss that is chasing the player. The boss checks for the player's position, stores that position, then moves in that direction until it hits the edge of the board. Once it hits the edge, the boss check the position again and moves in that direction, but a little faster. This continues faster and faster until the player is caught and gets his score based on how long they survived.
   
- #Functionality & MVPs
+ ## Functionality & MVPs
  Users will be able to:
   -Start, pause and restart the game
   -Use WASD to move around the level
@@ -12,7 +13,7 @@
  In addition, this project will include:
   A production README
   
- #Wireframes
+ ## Wireframes
  ![Homepage 3](https://user-images.githubusercontent.com/85881627/136560356-0b156066-e508-4f67-bdbd-12f9af6ec8df.png)
 
   -Instructions: Shows a popup box with an explanation of the rules and the controls of the game (WASD).
@@ -21,11 +22,11 @@
   -Nav Links: Github, LinkedIn
 
  
- #Technologies, Libraries, APIs
+ ## Technologies, Libraries, APIs
   -Canvas for the level and players.
   -Webpack to bundle JS
  
- #Implementation Timeline
+ ## Implementation Timeline
   -Friday Afternoon & Weekend: Setup project, get webpack running, and work on setting up the basics of the level and the movement of the boss and player.
 
   -Monday:  Finish user and boss collision if not done already, make sure everything works together,
@@ -36,6 +37,7 @@
 
   -Thursday Morning: Setup hosting for webpage
   
-  #Bonus Features
-    -Second level where boss bounces off the walls
-    -Implement items that boost the speed of the player, or slows down the boss. Extra life item to prolong the game.
+## Bonus Features
+  -Second level where boss bounces off the walls
+
+  -Implement items that boost the speed of the player, or slows down the boss. Extra life item to prolong the game.

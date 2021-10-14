@@ -24,15 +24,19 @@ h1{
   
 }
 
-/* .instructions{ Instructions Button
-  margin-bottom: 10px;
+.instructions{ 
+  margin-bottom: 20px;
   padding: 5px;
   font-family: fantasy;
   font-size: 14pt;
   display: inline-block;
   background-color: rgb(168, 138, 55);
   border: 2px solid black;
-} */
+}
+
+.instructions a:hover #instructions{
+  display: flex;
+}
 
 .reset{
   margin-bottom: 10px;
@@ -45,11 +49,11 @@ h1{
 }
 
 #instructions{
-  display: block;
-  position: static;
-  right: 100px;
-  width: 150px;
-  height: 450px;
+  /* display: flex; */
+  position: absolute;
+  justify-content: center;
+  display: none;
+  top: 150px;
   margin-left: 40px;
   align-items: center;
   flex-direction: column;
