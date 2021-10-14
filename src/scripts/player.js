@@ -2,7 +2,7 @@ const Character = require('./character');
 
 function Player(options = {}){
     options.pos = [100, 225];
-    options.vel = 0.18;
+    options.vel = 0.22;
     options.height = 70;
     options.width = 50;
     Character.call(this, options);
