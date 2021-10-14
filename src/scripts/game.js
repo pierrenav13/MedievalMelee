@@ -128,7 +128,7 @@ Game.prototype.loopGame = function(){
 
         if (moved){
             //500 ms intervals for animation
-            this.player.frame += 2.2;
+            this.player.frame += 2.6;
             if (this.player.frame > 3000){
                 this.player.frame = 1;
             }
