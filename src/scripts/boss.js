@@ -51,8 +51,8 @@ Boss.prototype.bounce = function(dimX, dimY){
     if((this.pos[0] + this.bX) < (dimX - 80) && (this.pos[0] + this.bX) > -2){
         this.pos[0] += this.bX;
     } else {
-        if (this.bX < 0.22 && this.bX > -0.22){
-            this.bX = -this.bX * 1.065;
+        if (this.bX < 0.25 && this.bX > -0.25){
+            this.bX = -this.bX * 1.1;
         } else{
             this.bX = -this.bX;
         }
@@ -60,8 +60,8 @@ Boss.prototype.bounce = function(dimX, dimY){
     if ((this.pos[1] + this.bY) < (dimY - 115) && (this.pos[1] + this.bY) > -2) {
         this.pos[1] += this.bY;
     } else {
-        if(this.bY < 0.22 && this.bY > -0.22){
-            this.bY = -this.bY * 1.065;
+        if(this.bY < 0.25 && this.bY > -0.25){
+            this.bY = -this.bY * 1.1;
         } else {
             this.bY = -this.bY;
         }
