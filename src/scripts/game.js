@@ -84,7 +84,7 @@ Game.prototype.over = function(){
         this.player.pos[1] + 18 < this.boss.pos[1] + this.boss.height &&
         this.player.height + this.player.pos[1] > this.boss.pos[1] + 10){
             this.gameOver = true;
-            alert('Game over');
+            //alert('Game over');
         }
 }
 
@@ -103,8 +103,8 @@ Game.prototype.move = function(x, y){
 }
 
 Game.prototype.loopGame = function(){
-    this.ctx.clearRect(0, 0, this.DIM_X, this.DIM_Y);
     if (this.gameOver === false) {
+        this.ctx.clearRect(0, 0, this.DIM_X, this.DIM_Y);
         let moved = false;
 
         if (this.keysPressed.w) {
@@ -143,8 +143,9 @@ Game.prototype.loopGame = function(){
         this.draw();
         this.over();
     } else{
-        this.ctx.clearRect(0, 0, this.DIM_X, this.DIM_Y);
+        //this.ctx.clearRect(0, 0, this.DIM_X, this.DIM_Y);
         this.bindMovement();
+        document.getElementById('game-over').style.display = 'flex';
     }
     //window.requestAnimationFrame(this.boundLoop);
 }
