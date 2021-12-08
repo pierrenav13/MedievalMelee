@@ -14,8 +14,8 @@ body{
 }
 
 h1{
-  color: rgb(255, 255, 255);
-  font-family: fantasy;
+  color: rgb(218, 162, 78);
+  font-family: 'MedievalSharp', cursive;
   font-size: 32pt;
   /* display: flex;
   justify-content: center; */
@@ -31,7 +31,7 @@ h1{
 #instruction-button{ 
   margin-bottom: 20px;
   padding: 5px;
-  font-family: fantasy;
+  font-family: 'MedievalSharp', cursive;
   font-size: 14pt;
   display: inline-block;
   background-color: rgb(55, 123, 168);
@@ -45,7 +45,7 @@ h1{
 .reset{
   margin-bottom: 10px;
   padding: 5px;
-  font-family: fantasy;
+  font-family: 'MedievalSharp', cursive;
   font-size: 14pt;
   display: inline-block;
   background-color: rgb(55, 123, 168);
@@ -62,7 +62,7 @@ h1{
   margin-left: 40px;
   /* align-items: center; */
   flex-direction: column;
-  font-family: fantasy;
+  font-family: 'MedievalSharp', cursive;
   color: white;
   background:rgb(55, 123, 168);
   border: 2px solid black;
@@ -85,7 +85,7 @@ h1{
 }
 
 #score{
-  font-family: fantasy;
+  font-family: 'MedievalSharp', cursive;
   font-size: 16pt;
   padding-top: 10px;
   padding-left: 30px;
@@ -99,7 +99,7 @@ h1{
 }
 
 #game-over{
-  font-family: fantasy;
+  font-family: 'MedievalSharp', cursive;
   color: rgb(158, 0, 0);
   font-weight: bolder;
   font-size: 32pt;
@@ -115,7 +115,7 @@ h1{
 }
 
 #git-hub, #linked-in{
-  font-family: fantasy;
+  font-family: 'MedievalSharp', cursive;
   color: white;
   font-size: 20pt;
   margin-left: 2px;
@@ -136,7 +136,7 @@ h1{
 }
 
 #start-game{
-  font-family: fantasy;
+  font-family: 'MedievalSharp', cursive;
   font-size: 16pt;
   padding-top: 10px;
   padding-left: 10px;
