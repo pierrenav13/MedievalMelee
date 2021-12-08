@@ -7,21 +7,25 @@ body{
   background-image: url('https://cutewallpaper.org/21/pixel-castle-background/WIP-2D-Platformer-Asset-Pack-Medieval-Castle-Devlogs-.gif');
 }
 
+#main-div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 h1{
   color: rgb(184, 206, 253);
   font-family: fantasy;
   font-size: 32pt;
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
   margin-top: 20px;
   margin-bottom: 10px;
 }
 
 #buttons{
   display: flex;
-  justify-content: center;
   justify-content: space-evenly;
-  
 }
 
 #instruction-button{ 
@@ -30,7 +34,7 @@ h1{
   font-family: fantasy;
   font-size: 14pt;
   display: inline-block;
-  background-color: rgb(168, 138, 55);
+  background-color: rgb(55, 123, 168);
   border: 2px solid black;
 }
 
@@ -44,22 +48,23 @@ h1{
   font-family: fantasy;
   font-size: 14pt;
   display: inline-block;
-  background-color: rgb(168, 138, 55);
+  background-color: rgb(55, 123, 168);
   border: 2px solid black;
 }
 
 #instructions{
   /* display: flex; */
   position: absolute;
-  justify-content: center;
+  /* justify-content: center; */
   display: none;
   top: 150px;
+  width: 250px;
   margin-left: 40px;
-  align-items: center;
+  /* align-items: center; */
   flex-direction: column;
   font-family: fantasy;
   color: white;
-  background:rgb(168, 138, 55);
+  background:rgb(55, 123, 168);
   border: 2px solid black;
   padding: 5px;
 }
@@ -87,20 +92,26 @@ h1{
   padding-right: 10px;
   color: white;
   border: 2px solid black;
-  background-color: rgb(168, 138, 55);
+  background-color: rgb(55, 123, 168);
   margin-bottom: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 #game-over{
   font-family: fantasy;
   color: rgb(158, 0, 0);
   font-weight: bolder;
-  font-size: 22pt;
-  position: relative;
-  display: none;
-  align-items: flex-start;
-  justify-content: center;
+  font-size: 32pt;
+  position: absolute;
+  z-index: 10;
 
+  display: none;
+  top: 50%;
+}
+
+#game-over:hover, #score:hover{
+  cursor: default;
 }
 
 #git-hub, #linked-in{
@@ -122,4 +133,27 @@ h1{
 .game{
   display: flex;
   justify-content: center;
+}
+
+#start-game{
+  font-family: fantasy;
+  font-size: 16pt;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: rgb(55, 123, 168);
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+}
+
+#start-game:hover{
+  cursor: pointer;
+}
+
+#med-mel{
+  border-radius: 5px;
 }

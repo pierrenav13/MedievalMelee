@@ -42,11 +42,20 @@ function Game(player, boss, canvas, ctx){
     let boundHide = this.hideInstructions.bind(this);
     this.instructions.addEventListener('mouseenter', boundShow);
     this.instructions.addEventListener('mouseleave', boundHide);
-    this.player.img.onload = function () {
-        setInterval(() => {
-            that.loopGame()
-        }, 20);
-    }
+    this.startGame = document.getElementById('start-game')
+    this.startGame.addEventListener('click', () => {
+        for (let n = 0; n < 9; n++) {
+            setInterval(() => {
+                that.loopGame()
+            }, 1);
+        }
+        that.startGame.style.display = 'none'
+    })
+    // this.player.img.onload = function () {
+    //     setInterval(() => {
+    //         that.loopGame()
+    //     }, 20);
+    // }
 
 }
 

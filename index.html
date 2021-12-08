@@ -11,34 +11,36 @@
     <script src="./src/scripts/keymaster.js"></script>
     <script src="./dist/main.js"></script>
     <title>Medieval Melee</title>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
 </head>
 
 <body>
-    <h1>Medieval Melee</h1>
-    <div id='buttons'>
-        <span id='instruction-button'><a href="#">Instructions</a></span>
-        <span id='score'>Score: 0</span>
-        <span class='reset'><a href="">Reset Game</a></span>
-    </div>
-    <span id='game-over'>GAME OVER</span>
-    <canvas id='med-mel' width="500" height="500"></canvas>
+    <div id='main-div'>
+        <h1>Medieval Melee</h1>
+        <div id='buttons'>
+            <span id='instruction-button'><a href="#">Instructions</a></span>
+            <span id='score'>Score: 0</span>
+            <span class='reset'><a href="">Reset Game</a></span>
+        </div>
+        <button id='start-game'>Start Game</button>
+        <span id='game-over'>GAME OVER</span>
+        <canvas id='med-mel' width="500" height="500"></canvas>
 
-    <ul id='instructions'>
-        <li>Use WASD to move the character.</li>
-        <li>The aim of the game is to evade the boss that bounces
-            around the stage.</li>
-        <li>Each time the boss hits the edge of
-            the stage, it gets faster.</li>
-        <li>The longer you survive, the
-            higher the score!</li>
-    </ul>
-    
+        <ul id='instructions'>
+            <li>Use WASD to move the character.</li>
+            <li>The aim of the game is to evade the boss that bounces
+                around the stage.</li>
+            <li>Each time the boss hits the edge of
+                the stage, it gets faster.</li>
+            <li>The longer you survive, the
+                higher the score!</li>
+        </ul>
 
-    <div class="links">
-        <span><a id='git-hub' href="https://github.com/pierrenav13/MedievalMelee.git">Github</a></span>
-        <span><a id='linked-in' href="https://www.linkedin.com/in/pierre-navarin-709335223">LinkedIn</a></span>
+        <div class="links">
+            <span><a id='git-hub' href="https://github.com/pierrenav13/MedievalMelee.git">Github</a></span>
+            <span><a id='linked-in' href="https://www.linkedin.com/in/pierre-navarin-709335223">LinkedIn</a></span>
+        </div>
     </div>
-    
 </body>
 
 </html>

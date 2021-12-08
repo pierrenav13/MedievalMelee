@@ -1,5 +1,6 @@
 canvas{
-  background-color: rgb(58, 54, 70);
+  background-image: url('/Users/reggie/Desktop/App Academy/medieval_melee/assets/dark_castle_tileset2.jpg');
+  background-size: 510px 200px;
   border: 8px solid rgb(32, 60, 102);
   display: flex;
   position: relative;
