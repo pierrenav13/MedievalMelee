@@ -51,11 +51,11 @@ function Game(player, boss, canvas, ctx){
         }
         that.startGame.style.display = 'none'
     })
-    this.player.img.onload = function () {
-        setInterval(() => {
-            document.body.style.backgroundImage = url('https://cutewallpaper.org/21/pixel-castle-background/WIP-2D-Platformer-Asset-Pack-Medieval-Castle-Devlogs-.gif')
-        }, 200);
-    }
+    // this.player.img.onload = function () {
+    //     setInterval(() => {
+    //         document.body.style.backgroundImage = URL.new('https://cutewallpaper.org/21/pixel-castle-background/WIP-2D-Platformer-Asset-Pack-Medieval-Castle-Devlogs-.gif')
+    //     }, 200);
+    // }
 
 }
 
