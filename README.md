@@ -10,10 +10,10 @@ Live: https://pierrenav13.github.io/MedievalMelee/
   
  ## Functionality & MVPs
  Users will be able to:
-  -Startand restart the game
-  -Use WASD to move around the level
-  -Use an instructions button to learn how to play
-  -Recieve a score at the end of the game.
+  * Start and restart the game
+  * Use WASD to move around the level
+  * Use an instructions button to learn how to play
+  * Recieve a score at the end of the game.
  In addition, this project will include:
   A production README
   
