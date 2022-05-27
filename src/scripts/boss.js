@@ -1,6 +1,3 @@
-// const Character = require('./character');
-
-
 function Boss(options = {}) {
     this.pos = [350, 190];
     this.speedCap = 3000;
@@ -71,9 +68,5 @@ Boss.prototype.bounce = function(dimX, dimY){
     //this.bY += 1;
 }
 
-// function Surrogate() { }
-// Surrogate.prototype = Character.prototype;
-// Boss.prototype = new Surrogate();
-// Boss.prototype.constructor = Boss;
 
 module.exports = Boss;
