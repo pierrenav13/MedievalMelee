@@ -15,7 +15,6 @@ Boss.prototype.draw = function () {
     }else {
         this.img.src = 'src/scripts/ghost-idle.png';
     }
-    //this.ctx.fillRect(...this.pos, this.width, this.height);
 
     this.ctx.drawImage(this.img, 20, 18, 53, 50, (this.pos[0] + this.width/8), this.pos[1], (this.width + this.width/1.5), (this.height + this.height/6));
     
@@ -63,9 +62,7 @@ Boss.prototype.bounce = function(dimX, dimY){
             this.bY = -this.bY;
         }
     }
-    //console.log(this.pos);
-    //this.bX += 1;
-    //this.bY += 1;
+    
 }
 
 
