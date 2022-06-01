@@ -65,5 +65,4 @@ Boss.prototype.bounce = function(dimX, dimY){
     
 }
 
-
 module.exports = Boss;
