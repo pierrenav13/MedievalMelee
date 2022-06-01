@@ -2,28 +2,6 @@ const Player = require('./player');
 const Boss = require('./boss');
 const { setInterval } = require('core-js');
 
-// // Import the functions you need from the SDKs you need
-// import { initializeApp } from "firebase/app";
-// import { getAnalytics } from "firebase/analytics";
-// // TODO: Add SDKs for Firebase products that you want to use
-// // https://firebase.google.com/docs/web/setup#available-libraries
-
-// // Your web app's Firebase configuration
-// // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-// const firebaseConfig = {
-//     apiKey: "AIzaSyAlRXuQ62R3dClL1IQr_HMG0wOEcK5xcb0",
-//     authDomain: "medieval-melee-a37fb.firebaseapp.com",
-//     projectId: "medieval-melee-a37fb",
-//     storageBucket: "medieval-melee-a37fb.appspot.com",
-//     messagingSenderId: "559935509208",
-//     appId: "1:559935509208:web:df6cf3461101d6c1bf7dad",
-//     measurementId: "G-YWKJ6K4T13"
-// };
-
-// // Initialize Firebase
-// const app = initializeApp(firebaseConfig);
-// const analytics = getAnalytics(app);
-
 function Game(player, boss, canvas, ctx){
     this.player = player;
     this.boss = boss;
@@ -51,11 +29,6 @@ function Game(player, boss, canvas, ctx){
         }
         that.startGame.style.display = 'none'
     })
-    // this.player.img.onload = function () {
-    //     setInterval(() => {
-    //         document.body.style.backgroundImage = URL.new('https://cutewallpaper.org/21/pixel-castle-background/WIP-2D-Platformer-Asset-Pack-Medieval-Castle-Devlogs-.gif')
-    //     }, 200);
-    // }
 
 }
 
