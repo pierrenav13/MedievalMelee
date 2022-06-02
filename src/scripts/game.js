@@ -41,10 +41,8 @@ Game.prototype.hideInstructions = function(){
 }
 
 Game.prototype.bindMovement = function () {
-    //debugger
     let that = this;
     window.addEventListener('keydown', function keyDown(e) {
-        //debugger
         e.preventDefault();
         that.keysPressed[e.key] = true;
         
@@ -67,7 +65,6 @@ Game.prototype.over = function(){
         this.player.pos[1] + 18 < this.boss.pos[1] + this.boss.height &&
         this.player.height + this.player.pos[1] > this.boss.pos[1] + 10){
             this.gameOver = true;
-            //alert('Game over');
         }
 }
 
@@ -91,7 +88,6 @@ Game.prototype.loopGame = function(){
         let moved = false;
 
         if (this.keysPressed.w) {
-            //debugger
             this.move(0, -(this.player.vel))
             moved = true;
         } else if (this.keysPressed.s) {
@@ -129,7 +125,6 @@ Game.prototype.loopGame = function(){
         document.getElementById('game-over').style.display = 'flex';
         //document.getElementById('instructions').style.display = 'flex';
     }
-    //window.requestAnimationFrame(this.boundLoop);
 }
 
 
