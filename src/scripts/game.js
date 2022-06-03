@@ -123,7 +123,6 @@ Game.prototype.loopGame = function(){
         this.over();
     } else{
         document.getElementById('game-over').style.display = 'flex';
-        //document.getElementById('instructions').style.display = 'flex';
     }
 }
 
