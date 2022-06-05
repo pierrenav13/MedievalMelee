@@ -126,6 +126,4 @@ Game.prototype.loopGame = function(){
     }
 }
 
-
-
 module.exports = Game;

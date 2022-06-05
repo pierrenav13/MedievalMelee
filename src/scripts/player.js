@@ -8,7 +8,6 @@ function Player(options = {}){
     Character.call(this, options);
 };
 
-
 function Surrogate() { };
 Surrogate.prototype = Character.prototype;
 Player.prototype = new Surrogate();
