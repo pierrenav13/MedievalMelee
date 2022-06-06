@@ -22,10 +22,10 @@ Live: https://pierrenav13.github.io/MedievalMelee/
  ## Wireframes
  ![Homepage 3](https://user-images.githubusercontent.com/85881627/136560356-0b156066-e508-4f67-bdbd-12f9af6ec8df.png)
 
-  -Instructions: Shows a popup box with an explanation of the rules and the controls of the game (WASD).
-  -Reset: Restarts the game.
-  -Game Level: Contains the player and the boss.
-  -Nav Links: Github, LinkedIn
+  *Instructions: Shows a popup box with an explanation of the rules and the controls of the game (WASD).
+  *Reset: Restarts the game.
+  *Game Level: Contains the player and the boss.
+  *Nav Links: Github, LinkedIn
 
  
  ## Technologies, Libraries, APIs
