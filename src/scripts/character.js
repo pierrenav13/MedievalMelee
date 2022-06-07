@@ -7,7 +7,6 @@ function Character(options){
     this.frame = 0;
     this.direction = 0;
     this.img = new Image();
-
 }
 
 Character.prototype.drawImg = function () {
