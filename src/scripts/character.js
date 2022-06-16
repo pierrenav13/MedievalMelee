@@ -11,7 +11,6 @@ function Character(options){
 
 Character.prototype.drawImg = function () {
     let imgDim = [0, 0, 35, 40];
-
     
     if (this.direction === 0){
         this.img.src = 'assets/adventurer-v1.5-Sheet.png';
