@@ -29,21 +29,21 @@ Live: https://pierrenav13.github.io/MedievalMelee/
 
  
  ## Technologies, Libraries, APIs
-  -Canvas for the level and players.
-  -Webpack to bundle JS
+  * Canvas for the level and players.
+  * Webpack to bundle JS
  
  ## Implementation Timeline
-  -Friday Afternoon & Weekend: Setup project, get webpack running, and work on setting up the basics of the level and the movement of the boss and player.
+  * Friday Afternoon & Weekend: Setup project, get webpack running, and work on setting up the basics of the level and the movement of the boss and player.
 
-  -Monday:  Finish user and boss collision if not done already, make sure everything works together,
+  * Monday:  Finish user and boss collision if not done already, make sure everything works together,
 
-  -Tuesday: Work on setting up animations. Look into assets for player, boss, and level.
+  * Tuesday: Work on setting up animations. Look into assets for player, boss, and level.
 
-  -Wednesday: Implement the assets into the game and work on the instructions and look of the webpage
+  * Wednesday: Implement the assets into the game and work on the instructions and look of the webpage
 
-  -Thursday Morning: Setup hosting for webpage
+  * Thursday Morning: Setup hosting for webpage
   
 ## Bonus Features
-  -Second level where boss bounces off the walls
+  * Second level where boss bounces off the walls
 
-  -Implement items that boost the speed of the player, or slows down the boss. Extra life item to prolong the game.
+  * Implement items that boost the speed of the player, or slows down the boss. Extra life item to prolong the game.
